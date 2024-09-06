@@ -1,0 +1,44 @@
+/* Trae la fuente Poppins desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Inicia Tailwind CSS con las reglas base, componentes y utilidades */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Aquí definimos reglas base para la página */
+@layer base {
+  html {
+    /* Establece la fuente por defecto para el HTML */
+    font-family: "Poppins", "sans-serif";
+  }
+
+  body {
+    /* Establece el color de fondo del cuerpo y oculta el desbordamiento horizontal */
+    background-color: #fdfeff;
+    overflow-x: hidden;
+  }
+}
+
+/* Aquí definimos estilos para componentes específicos */
+@layer components {
+  .input-box {
+    /* Estilo para cajas de entrada */
+    @apply w-full text-sm bg-transparent border-[1.5px] px-5 py-3 rounded mb-4 outline-none;
+  }
+
+  .btn-primary {
+    /* Estilo para botones primarios */
+    @apply w-full text-sm bg-primary text-white p-2 rounded my-1 hover:bg-blue-600;
+  }
+  
+  .icon-btn {
+    /* Estilo para botones con iconos */
+    @apply text-xl text-slate-300 cursor-pointer hover:text-primary;
+  }
+
+  .input-label {
+    /* Estilo para etiquetas de entrada */
+    @apply text-xs text-slate-400;
+  }
+}
